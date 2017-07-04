@@ -1,0 +1,196 @@
+@import "../layout/mixin";
+
+body {
+    position: relative;
+    overflow-x: hidden;
+    #default;
+}
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+a,
+a:focus,
+a:hover {
+    text-decoration: none;
+}
+
+/*-------------------------------*/
+/*           Headers             */
+/*-------------------------------*/
+.header {
+    background: @header-bg;
+    display: block;    
+    height: @header-height;
+    line-height: @header-height;
+    overflow: hidden;
+    padding: 0;
+    width: @full-width;
+}
+
+.header--brand {
+    background: @header--brand-bg;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+}
+
+.header--brand__text {
+    float: left;
+    margin-left: 10px;
+}
+
+.header--navbar__custom {
+    border: 0;
+    a {
+        &:not(:last-of-type):after {
+            content: " | ";
+            margin: 0 5px;
+        }
+    }
+}
+
+.navbar-header-icon {
+    margin-left: 10px;
+}
+
+.navbar-header-panel {
+    background: #fff;
+    border-top: solid 1px #333;
+    left: 0;
+    position: fixed;
+    top: @header-height;
+    width: 100%;
+    z-index: 10;
+}
+
+.backdrop {
+    background: #eee;
+    height: 100%;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+
+/*-------------------------------*/
+/*           Wrappers            */
+/*-------------------------------*/
+
+#app {
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    padding-left: 0;
+    transition: all 0.5s ease;
+}
+#app.toggled {
+    padding-left: @sidebar-width;
+    #sidebar-wrapper {
+        width: @sidebar-width;
+    }
+    #content-wrapper {
+        margin-right: -@sidebar-width;
+        position: absolute;
+    }
+}
+#sidebar-wrapper {
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    background: #1a1a1a;
+    height: @full-height;
+    left: @sidebar-width;
+    margin-left: 0 - @sidebar-width;
+    overflow-x: hidden;
+    overflow-y: auto;
+    transition: all 0.5s ease;
+    width: 0;
+    z-index: 1000;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+/*-------------------------------*/
+/*          Dark Overlay         */
+/*-------------------------------*/
+
+.overlay {
+    position: fixed;
+    display: none;
+    width: @full-width;
+    height: @full-height;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,.4);
+    z-index: 1000;
+}
+#app-body {
+    margin-top: 10px;
+    padding: 0 20px;
+}
+.no-padding {
+    padding: 0;
+}
+.text-error {
+    color: @text-error;
+}
+
+@media only screen and (max-width: 960px) {
+        /* Force table to not be like tables anymore */
+        #no-more-tables table,
+        #no-more-tables thead,
+        #no-more-tables tbody,
+        #no-more-tables th,
+        #no-more-tables td,
+        #no-more-tables tr {
+            display: block;
+        }
+         
+        /* Hide table headers (but not display: none;, for accessibility) */
+        #no-more-tables thead tr {
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+        }
+         
+        #no-more-tables tr { border: 1px solid #ccc; }
+          
+        #no-more-tables td {
+        /* Behave like a "row" */
+            border: none;
+            border-bottom: 1px solid #eee;
+            position: relative;
+            padding-left: 50%;
+            white-space: normal;
+            text-align:left;
+        }
+         
+        #no-more-tables td:before {
+            /* Now like a table header */
+            position: absolute;
+            /* Top/left values mimic padding */
+            top: 6px;
+            left: 6px;
+            width: 45%;
+            padding-right: 10px;
+            white-space: nowrap;
+            text-align:left;
+            font-weight: bold;
+        }
+         
+        /*
+        Label the data
+        */
+        #no-more-tables td:before { content: attr(data-title); }
+}
+	

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Page</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+    <link rel='stylesheet prefetch' href='/admin/css/layout.min.css'>
+</head>
+
+<body>
+    <div id="app">
+        <div class="overlay"></div>
+
+        <aside class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
+            <ul class="nav sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">
+                       Bootstrap 3
+                    </a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-fw fa-home"></i> Home</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-fw fa-folder"></i> Page one</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-fw fa-file-o"></i> Second page</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-fw fa-cog"></i> Third page</a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-plus"></i> Dropdown <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li class="dropdown-header">Dropdown heading</li>
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li><a href="#">Separated link</a></li>
+                        <li><a href="#">One more separated link</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-fw fa-bank"></i> Page four</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-fw fa-dropbox"></i> Page 5</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-fw fa-twitter"></i> Last page</a>
+                </li>
+            </ul>
+        </aside>
+        <!-- /#sidebar-wrapper -->
+        <main>
+            
+            <div class='header'>
+                <div class="header--brand col-md-3">
+                    <button type="button" class="navbar-toggle hamburger is-closed animated fadeInLeft" data-toggle="offcanvas" @aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="hamb-top icon-bar"></span>
+                        <span class="hamb-middle icon-bar"></span>
+                        <span class="hamb-bottom icon-bar"></span>
+                    </button>
+                    <a class='header--brand__text' href="#">Webpack</a>
+                </div>
+
+                <nav class="navbar col-md-offset-6 col-md-3 header--navbar__custom text-right" role="navigation">
+                    <div class="navbar-header hidden-md hidden-lg">
+                        <span class="navbar-header-icon" data-toggle="collapse" data-target=".navbar-search">
+                            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                        </span>
+                        <span class="navbar-header-icon" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="glyphicon glyphicon-option-vertical" aria-hidden="true"></span>
+                        </span>
+                    </div>
+                    <div class="navbar-collapse collapse navbar-header-panel">
+                         <a href="#">
+                            Email
+                        </a>
+                        <a href="#">
+                            Notification
+                        </a>
+                        <a href="#">
+                            Pandog
+                        </a>
+                    </div>
+                </nav>
+            </div>
+            <div class="navbar-search collapse backdrop">
+                Searching...
+            </div>
+            <div id='app-body' class="container-fluid">
+                Content here
+            </div>
+        </main>
+    </div>
+
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
+    <script src='/admin/js/app.min.js'></script>
+</body>
+
+</html>

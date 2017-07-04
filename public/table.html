@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Page</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+    <link rel='stylesheet prefetch' href='/admin/css/layout.min.css'>
+</head>
+
+<body>
+    <div id="app">
+        <div class="overlay"></div>
+
+        <aside class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
+            <ul class="nav sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">
+                       Bootstrap 3
+                    </a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-fw fa-home"></i> Home</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-fw fa-folder"></i> Page one</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-fw fa-file-o"></i> Second page</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-fw fa-cog"></i> Third page</a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-plus"></i> Dropdown <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li class="dropdown-header">Dropdown heading</li>
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li><a href="#">Separated link</a></li>
+                        <li><a href="#">One more separated link</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-fw fa-bank"></i> Page four</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-fw fa-dropbox"></i> Page 5</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-fw fa-twitter"></i> Last page</a>
+                </li>
+            </ul>
+        </aside>
+        <!-- /#sidebar-wrapper -->
+        <main>
+            
+            <div class='header'>
+                <div class="header--brand col-md-3">
+                    <button type="button" class="navbar-toggle hamburger is-closed animated fadeInLeft" data-toggle="offcanvas" @aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="hamb-top icon-bar"></span>
+                        <span class="hamb-middle icon-bar"></span>
+                        <span class="hamb-bottom icon-bar"></span>
+                    </button>
+                    <a class='header--brand__text' href="#">Webpack</a>
+                </div>
+
+                <nav class="navbar col-md-offset-6 col-md-3 header--navbar__custom text-right" role="navigation">
+                    <div class="navbar-header hidden-md hidden-lg">
+                        <span class="navbar-header-icon" data-toggle="collapse" data-target=".navbar-search">
+                            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                        </span>
+                        <span class="navbar-header-icon" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="glyphicon glyphicon-option-vertical" aria-hidden="true"></span>
+                        </span>
+                    </div>
+                    <div class="navbar-collapse collapse navbar-header-panel">
+                         <a href="#">
+                            Email
+                        </a>
+                        <a href="#">
+                            Notification
+                        </a>
+                        <a href="#">
+                            Pandog
+                        </a>
+                    </div>
+                </nav>
+            </div>
+            <div class="navbar-search collapse backdrop">
+                Searching...
+            </div>
+            <div id='app-body' class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">Table data</div>
+                            <div class="panel-body">
+                                <div id="no-more-tables">
+                                    <table class="table"> 
+                                        <thead class='cf'> 
+                                            <tr> 
+                                                <th>Id</th> 
+                                                <th>First Name</th> 
+                                                <th>Last Name</th> 
+                                                <th>Username</th> 
+                                                <th>Email</th> 
+                                                <th>Title</th>
+                                                <th>Content</th>
+                                            </tr> 
+                                        </thead> 
+                                        <tbody> 
+                                            <tr> 
+                                                <td data-title='Id'>1</td> 
+                                                <td data-title='First Name'>Mark</td> 
+                                                <td data-title='Last Name'>Otto</td> 
+                                                <td data-title='Username'>@mdo</td> 
+                                                <td data-title='Email'>email@mail.jp</td> 
+                                                <td data-title='Title'>Title.</td>
+                                                <td data-title='Content'>Content.</td>
+                                            </tr> 
+                                            <tr> 
+                                                <td data-title='Id'>2</td> 
+                                                <td data-title='First Name'>Mark</td> 
+                                                <td data-title='Last Name'>Otto</td> 
+                                                <td data-title='Username'>@mdo</td> 
+                                                <td data-title='Email'>email@mail.jp</td> 
+                                                <td data-title='Title'>Sự chờ đợi của CĐV Manchester United về thương vụ này có thể sắp kết thúc trong vài ngày tới.</td>
+                                                <td data-title='Content'>Sự chờ đợi của CĐV Manchester United về thương vụ này có thể sắp kết thúc trong vài ngày tới.</td>
+                                            </tr>
+                                            <tr> 
+                                                <td data-title='Id'>3</td> 
+                                                <td data-title='First Name'>Mark</td> 
+                                                <td data-title='Last Name'>Otto</td> 
+                                                <td data-title='Username'>@mdo</td> 
+                                                <td data-title='Email'>email@mail.jp</td> 
+                                                <td data-title='Title'>Sự chờ đợi của CĐV Manchester United về thương vụ này có thể sắp kết thúc trong vài ngày tới.</td>
+                                                <td data-title='Content'>Sự chờ đợi của CĐV Manchester United về thương vụ này có thể sắp kết thúc trong vài ngày tới.</td>
+                                            </tr> 
+                                        </tbody> 
+                                    </table>
+                                </div>
+                                <nav class='text-center'> 
+                                    <ul class="pagination"> 
+                                        <li class="disabled">
+                                            <a href="#" aria-label="Previous">
+                                                <span aria-hidden="true">«</span>
+                                            </a>
+                                        </li> 
+                                        <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li> 
+                                        <li><a href="#">2</a></li> 
+                                        <li><a href="#">3</a></li> 
+                                        <li><a href="#">4</a></li> 
+                                        <li><a href="#">5</a></li> 
+                                        <li><a href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li> 
+                                    </ul> 
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
+    <script src='/admin/js/app.min.js'></script>
+</body>
+
+</html>
